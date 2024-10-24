@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>任务管理器</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://www.bilibili.com/video/BV1m34y187UJ?spm_id_from=333.788.videopod.sections&vd_source=c9b9263295ab04d5afdf0a279540c0ee" target="_blank">工作音乐</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="dashboard">
+                <h2>日期进度</h2>
+                <div class="gauge">
+                    <div class="gauge-fill" id="date-gauge-fill"></div>
+                    <div class="gauge-cover" id="date-gauge-cover"></div>
+                </div>
+                <h2>任务进度</h2>
+                <div class="gauge">
+                    <div class="gauge-fill" id="task-gauge-fill"></div>
+                    <div class="gauge-cover" id="task-gauge-cover"></div>
+                </div>
+                <h2>总任务进度</h2>
+                <div class="gauge">
+                    <div class="gauge-fill" id="total-task-gauge-fill"></div>
+                    <div class="gauge-cover" id="total-task-gauge-cover"></div>
+                </div>
+            </section>
+            <section class="daily-tasks">
+                <h2>每日待办</h2>
+                <ul id="task-list"></ul>
+            </section>
+            <section class="new-plan">
+                <h2>新建计划</h2>
+                <form id="plan-form">
+                    <label for="stage">任务阶段：</label>
+                    <input type="text" id="stage" required>
+                    <label for="start-date">开始日期：</label>
+                    <input type="date" id="start-date" required>
+                    <label for="end-date">结束日期：</label>
+                    <input type="date" id="end-date" required>
+                    <label for="tasks">每日任务（每行一个）：</label>
+                    <textarea id="tasks" rows="5" required></textarea>
+                    <button type="submit">创建计划</button>
+                </form>
+            </section>
+            <button onclick="location.href='subpage.html'">查看图片</button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
